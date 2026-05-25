@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Barlow:wght@300;400;500;600;700;900&family=Barlow+Condensed:wght@400;600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Barlow', sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+  --font-cond: 'Barlow Condensed', sans-serif;
+  
+  --color-dash-bg: #070510;
+  --color-dash-panel: #120e22;
+  --color-dash-sidebar: #06040b;
+  --color-dash-border: #1d1730;
+  --color-dash-purple: #8b5cf6;
+  --color-dash-purple-glow: rgba(139, 92, 246, 0.15);
+}
+
+/* Custom Webkit scrollbars in the panel list objects */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #211a36;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
+@keyframes fanSpin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-fan-spin {
+  animation: fanSpin 1.5s linear infinite;
+}
+
+.animate-fan-spin-fast {
+  animation: fanSpin 0.7s linear infinite;
+}
